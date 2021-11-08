@@ -86,37 +86,29 @@ Built by weebs for weebs, I specialize in managing anime eccentric communities.
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕ Add Me", url="t.me/FoundingTitanRobot?startgroup=true"),    
+            text="➕ Add Me", url="t.me/komiXRobot?startgroup=true"),    
         InlineKeyboardButton(
               text="⚙️ Help", callback_data="help_back"),   
    ],
     [      
        InlineKeyboardButton(
-            text="📖 Quick Setup", url="https://t.me/foundingtitanupdates/4"),        
+            text="updates", url="https://t.me/komiXupdates"),        
           InlineKeyboardButton(
-            text="📋 ChangeLogs", url="https://t.me/FoundingTitanupdates"),
+            text="📋 ChangeLogs", url="https://t.me/komiXsupport"),
     
    ],
     [      
           InlineKeyboardButton(
-            text="🗣️ Support", url="https://t.me/Foundingtitansupport"),
-          InlineKeyboardButton(
-            text="🌐 Nexus Network", url="https://t.me/Nexus_Network",
+            text="🗣️ Support", url="https://t.me/Foundingtitansupport")
     
          ),
     ],
 ] 
 
 HELP_STRINGS = """
-Hey there, I'm Eren Jaeger!
-To make me functional, make sure that i have enough rights in your group.
-Helpful commands:
-- /start: Starts me! You've probably already used this.
-- /help: Sends this message; I'll tell you more about myself!
-- /donate: Gives you info on how to support me and my creator.
-If you want to report bugs or have any questions on how to use me then feel free to reach out: @FoundingTitanSupport.
-All commands can be used with the following: / !
-List of all the Modules:
+Hello ! My name is [shouko komi](https://te.legra.ph/file/1f1158b6e7062935b6115.mp4)!
+I'm Anime Themed group management bot with useful and powerful features that will help u to manage your group smoothly .if u want to know about command then do /help for any 
+doubts or any queries about me then ask at the support group ✨
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "📝All commands can either be used with / or !.",
@@ -666,7 +658,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/69db8d7439cd6413bc3a7.mp4)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://te.legra.ph/file/204c61821c0daaba0b96b.jpg)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
