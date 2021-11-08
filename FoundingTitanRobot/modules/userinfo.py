@@ -114,7 +114,7 @@ def hpmanager(user):
 
 def make_bar(per):
     done = min(round(per / 10), 10)
-    return "■" * done + "□" * (10 - done)
+    return "💗" * done + "💔" * (10 - done)
 
 
 def get_id(update: Update, context: CallbackContext):
@@ -240,17 +240,17 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"╒═══「<b> Appraisal results:</b> 」\n"
-        f"ID: <code>{user.id}</code>\n"
-        f"First Name: {html.escape(user.first_name)}"
+        f"✨ID: {user.id}\n"
+        f"✨First Name: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\nLast Name: {html.escape(user.last_name)}"
+        text += f"\n✨Last Name: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\nUsername: @{html.escape(user.username)}"
+        text += f"\n✨Username: @{html.escape(user.username)}"
 
-    text += f"\nUserlink: {mention_html(user.id, 'link')}"
+    text += f"\n✨Userlink: {mention_html(user.id, 'nibba')}"
 
     if chat.type != "private" and user_id != bot.id:
         _stext = "\nPresence: <code>{}</code>"
@@ -285,26 +285,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'Founding Titan'."
+        text += "\n\nThis user is my *'Darling'*."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of the 'Ackerman Clan'."
+        text += "\n\nThis user is my *'Onichan'*."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Titan Shifter'."
+        text += "\n\nThis user is my *'Sensei'*."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Royal Blood'."
-        disaster_level_present = True 
+        text += "\n\nThis user is my *'Senpai'*."
+        disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Scout'."
+        text += "\n\nThis user is my *'Bestfrnd'*."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Garrison'."
+        text += "\n\nThis user is my *'frnd'*."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/foundingtitanupdates/12">?</a>]'.format(
+        text += ' [<a href="">?</a>]'.format(
             bot.username,
         )
 
